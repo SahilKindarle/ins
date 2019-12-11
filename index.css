@@ -103,3 +103,11 @@ background-image: linear-gradient(360deg, #b8c6db 20%, #f5f7fa 94%);
 .padding-30{
     padding: 10px !important;
 }
+
+#upload-btn{
+    background: #4285F4 !important;
+}
+
+#section1-container{
+    margin-top: 55%;
+}

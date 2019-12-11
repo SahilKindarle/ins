@@ -16,71 +16,96 @@
 
 <body class="screen-fit">
     <div class="row screen-fit margin-0">
-        <!-- <div class="col s12 m4 overflow-hidden padding-zero screen-fit">
+        <div class="col s12 m5 center overflow-hidden padding-zero screen-fit">
+            <div class="container" id="section1-container">
+
+                    <h4 class="center mont strong margin-20">
+                            Upload Spreadsheet Here
+                        </h4>
+
+                    <div class="file-field input-field">
+                            <div class="btn" id="upload-btn">
+                              <span>File</span>
+                              <input type="file" accept=".xlsx">
+                            </div>
+                            <div class="file-path-wrapper">
+                              <input class="file-path validate" type="text">
+                              <span class="helper-text" data-error="Only Xlsx Allowed" data-success="right">Helper text</span>
         
-        </div> -->
-        <div class="col s12 white" style="height: 100vh;">
+                            </div>
+                          </div>
+
+                <button class="btn waves-effect waves-light" id="btn-index">Upload
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+        
+        </div>
+        <div class="col s12 m7 white" style="height: 100vh;">
             <div class="row">
                 <div>
                     <div class="container">
-                            <p class="right">
-                                    Already a Member? 
-                                    <a href="#">
-                                            Sign In
-                                    </a>
-                                </p>
+                        <p class="right">
+                            Already a Member?
+                            <a href="#">
+                                Sign In
+                            </a>
+                        </p>
                     </div>
                 </div>
             </div>
-            <h4 class="center padding-30 mont strong margin-20">
+            <h4 class="center mont strong margin-20">
                 Generate Certificate
             </h4>
             <div class="container">
-                
-                <div class="row">
-                    <div class="container">
-                        <div class="col s6">
+
+                <form action="#">
+                    <div class="row">
+                        <div class="container">
+                            <div class="col s6">
                                 <div class="input-field">
-                                        <input id="first_name" type="text" class="validate">
-                                        <label for="first_name">First Name</label>
-                                      </div>
-                        </div>
-                        <div class="col s6">
+                                    <input id="first_name" type="text" class="validate">
+                                    <label for="first_name">First Name</label>
+                                </div>
+                            </div>
+                            <div class="col s6">
                                 <div class="input-field">
-                                        <input id="last_name" type="text" class="validate">
-                                        <label for="last_name">Last Name</label>
-                                      </div>
-                        </div>
-                        <div class="col s12">
+                                    <input id="last_name" type="text" class="validate">
+                                    <label for="last_name">Last Name</label>
+                                </div>
+                            </div>
+                            <div class="col s12">
                                 <div class="input-field">
-                                        <input id="college_name" type="text" class="validate">
-                                        <label for="college_name">College Name</label>
-                                      </div>
-                        </div>
-                        <div class="col s12">
+                                    <input id="college_name" type="text" class="validate">
+                                    <label for="college_name">College Name</label>
+                                </div>
+                            </div>
+                            <div class="col s12">
                                 <div class="input-field">
-                                        <input id="campaign_name" type="text" class="validate">
-                                        <label for="campaign_name">Campaign Name</label>
-                                      </div>
-                        </div>
-                        <div class="col s12">
-                            <div class="input-field">
+                                    <input id="campaign_name" type="text" class="validate">
+                                    <label for="campaign_name">Campaign Name</label>
+                                </div>
+                            </div>
+                            <div class="col s12">
+                                <div class="input-field">
                                     <textarea id="comments" class="materialize-textarea"></textarea>
                                     <label for="comments">Comments</label>
+                                </div>
+                            </div>
+                            <div class="center">
+                                <button class="btn waves-effect waves-light" type="submit" name="action"
+                                    id="btn-index">Submit
+                                    <i class="material-icons right">send</i>
+                                </button>
+
                             </div>
                         </div>
-                        <div class="center">
-                                <button class="btn waves-effect waves-light" type="submit" name="action" id="btn-index">Submit
-                                        <i class="material-icons right">send</i>
-                                      </button>
-                                            
-                        </div>
                     </div>
-                </div>
+                </form>
 
                 <!-- <div class="card corners-round borders-top-right"> -->
-                    <!-- <div class="card-content white-text"> -->
-                    <!-- </div> -->
+                <!-- <div class="card-content white-text"> -->
+                <!-- </div> -->
                 <!-- </div> -->
             </div>
         </div>
