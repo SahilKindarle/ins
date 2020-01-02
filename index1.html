@@ -40,12 +40,12 @@
             }
         }
 
-        input[type=text]:not(.browser-default):focus:not([readonly]) {
+        input[type=text]:not(.browser-default):focus:not([readonly]),textarea.materialize-textarea:focus:not([readonly]) {
             border-bottom: 1px solid #4285F4 !important;
             box-shadow: 0 1px 0 0 #4285F4 !important;
         }
 
-        input[type=text]:not(.browser-default):focus:not([readonly])+label {
+        input[type=text]:not(.browser-default):focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label {
             color: #4285F4 !important;
         }
 
@@ -97,11 +97,11 @@
                     <ul class="collapsible popout">
                         <li class="active">
                             <div class="collapsible-header" style=" padding-left: 0px !important;display: block;">
-                                <h5 class="center mont"> Validate Certificate </h5>
+                                <h5 class="center mont"> Generate Certificate </h5>
                             </div>
                             <div class="collapsible-body">
                                 <div class="container">
-                                    <div class="row">
+                                    <!-- <div class="row">
                                         <div class="col s6">
                                             <img src="googlelogo.png" alt="" width="100">
                                         </div>
@@ -118,9 +118,59 @@
                                                 </div>
                                             </form>
                                         </div>
+                                    </div> -->
+                                    <div class="container">
+
+                                        <form action="#">
+                                            <div class="row">
+                                                
+                                                    <div class="col s6">
+                                                        <div class="input-field">
+                                                            <input id="first_name" type="text" class="validate">
+                                                            <label for="first_name">First Name</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col s6">
+                                                        <div class="input-field">
+                                                            <input id="last_name" type="text" class="validate">
+                                                            <label for="last_name">Last Name</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col s12">
+                                                        <div class="input-field">
+                                                            <input id="college_name" type="text" class="validate">
+                                                            <label for="college_name">College Name</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col s12">
+                                                        <div class="input-field">
+                                                            <input id="campaign_name" type="text" class="validate">
+                                                            <label for="campaign_name">Campaign Name</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col s12">
+                                                        <div class="input-field">
+                                                            <textarea id="comments"
+                                                                class="materialize-textarea"></textarea>
+                                                            <label for="comments">Comments</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="center">
+                                                        <button class="btn waves-effect waves-light" type="submit" style="background-color: #4285F4;"
+                                                            name="action" id="btn-index">Submit
+                                                            <i class="material-icons right">send</i>
+                                                        </button>
+
+                                                    </div>
+                                                
+                                            </div>
+                                        </form>
+
+
+
+
                                     </div>
                                 </div>
-                            </div>
                         </li>
                         <li>
                             <div class="collapsible-header" style=" padding-left: 0px !important;display: block;">
