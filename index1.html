@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com;"> -->
+    <title>Generate single certificate</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <link defer rel="stylesheet" defer
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha256-azvvU9xKluwHFJ0Cpgtf0CYzK7zgtOznnzxV4924X1w=" crossorigin="anonymous" /> -->
+    <link defer rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <style>
+        *,
+        .mont {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        img {
+            animation-duration: 3s;
+            animation-name: slidein;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes slidein {
+            from {
+                margin-left: 150%;
+            }
+
+            to {
+                margin-left: -100%;
+            }
+        }
+
+        input[type=text]:not(.browser-default):focus:not([readonly]) {
+            border-bottom: 1px solid #4285F4 !important;
+            box-shadow: 0 1px 0 0 #4285F4 !important;
+        }
+
+        input[type=text]:not(.browser-default):focus:not([readonly])+label {
+            color: #4285F4 !important;
+        }
+
+        .collapsible.popout>li.active {
+            border-top: 4px solid #4285F4 !important;
+        }
+
+        .collapsible-body {
+            background-color: #FFFFFF;
+        }
+    </style>
+</head>
+
+<body style="background-color: #E8E8E8;">
+    <div class="row">
+
+        <!-- <form id='form'>
+            <div class="row form-group">
+                <label class="col-5 " for="inputSName">Enter student name</label>
+                <div class="col-1"></div>
+                <input class="col-4 form-control" id="inputSName" pattern="^([a-z,A-Z,\s]{1,20}$)" maxlength="20"
+                    type="text" required placeholder="Pupil name"
+                    style="border-width: 3px; border-color: dimgray; border: dashed;">
+            </div>
+            <div class="row form-group">
+                <label class="col-5 col-form-label" for="inputColName">Enter College name</label>
+                <div class="col-1"></div>
+                <input class="col-4 form-control" pattern="^([a-z,A-Z,\s]{1,50}$)" id="inputColName" type="text"
+                    required placeholder='College Name'
+                    style="border-width: 3px; border-color: dimgray; border: dashed;">
+            </div>
+            <div class="row form-group">
+                <label class="col-5 col-form-label" for="inputCampName">Enter name for campaign</label>
+                <div class="col-1"></div>
+                <input class="col-4 form-control" pattern="^([a-z,A-Z,0-9,\s]{1,20}$)" id="inputCampName"
+                    placeholder="Campaign name" type="text" required
+                    style="border-width: 3px; border-color: dimgray; border: dashed;">
+            </div>
+            <div class="row form-group">
+                <label class="col-5 col-form-label" for="inputCmnt">Enter any comments if required</label>
+                <div class="col-1"></div>
+                <input class="col-4 form-control" id="inputCmnt" type="text" placeholder="Comments"
+                    style="border-width: 3px; border-color: dimgray; border: dashed;">
+            </div>
+        </form> -->
+        <div class="container">
+            <div class="row valign-wrapper">
+                <div class="col s12 valign center" style="margin:10%">
+                    <ul class="collapsible popout">
+                        <li class="active">
+                            <div class="collapsible-header" style=" padding-left: 0px !important;display: block;">
+                                <h5 class="center mont"> Validate Certificate </h5>
+                            </div>
+                            <div class="collapsible-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col s6">
+                                            <img src="googlelogo.png" alt="" width="100">
+                                        </div>
+                                        <div class="col s6">
+                                            <form action="#" id="form" method="POST">
+                                                <div id="verify">
+                                                    <div class="input-field">
+                                                        <input id="last_name" type="text" class="validate"
+                                                            maxlength="7">
+                                                        <label for="last_name">Enter Certificate id</label>
+                                                        <span class="helper-text">The Certificate ID at bottom of
+                                                            certificate.</span>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header" style=" padding-left: 0px !important;display: block;">
+                                <h5 class="center mont"> Upload Excelsheet </h5>
+                            </div>
+                            <div class="collapsible-body">
+                                <div class="container">
+
+                                    <p class="center">
+                                        Only .xlsx & .csv allowed
+                                    </p>
+
+                                    <form action="#">
+                                        <div class="file-field input-field">
+                                            <div class="btn" style="background-color: #4285F4;">
+                                                <span>File</span>
+                                                <input type="file" accept=".xlsx, .csv">
+                                            </div>
+                                            <div class="file-path-wrapper">
+                                                <input class="file-path validate" type="text">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        M.AutoInit();
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#verify").hide(0).delay(500).fadeIn(2000)
+        });
+
+        $(function () {
+            var $id = $('#sID');
+            $id.keyup(function (e) {
+                if ($id.val().length >= 7) {
+                    $(this.form).submit();
+                }
+            });
+        });
+    </script>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha256-63ld7aiYP6UxBifJWEzz87ldJyVnETUABZAYs5Qcsmc=" crossorigin="anonymous"></script>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"
+        integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+
+    <script defer src="./js/main.js"></script>
+
+
+</html>
